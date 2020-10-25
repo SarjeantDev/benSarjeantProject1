@@ -32,10 +32,13 @@ dark green: #152D20
 
 html {
     font-size: 62.5%;
+    overflow-x:hidden;
+    
 }
 body {
     font-family: 'Josefin Sans', sans-serif;
     color: #FCFCFC;
+    overflow-x:hidden;
 }
 
 ul {
@@ -113,20 +116,22 @@ header h1 {
     font-weight: 100;
     width: 70%;
     text-align: right;
-    margin-top: 100px;
+    margin: 100px 100px 0 0;
 }
 
 /* header icon styles */
 .headerIcons {
     margin: 200px 20px 10px 0;
-    width: 50px;
-    position: fixed;
+    max-width: 50px;
+    position:absolute;
+    
     right: 0px;
-
+    bottom: 20px;
 }
 
 header a i {
     padding: 10px;
+    
 }
 
 /* ABOUT SECTION */
@@ -140,9 +145,6 @@ header a i {
     padding: 100px 40px 100px 0;
 }
 
-.aboutImg img {
-    width: 100%;
-}
 
 .aboutContent {
     float: left;
@@ -155,6 +157,7 @@ header a i {
     font-size: 5.1rem;
     font-weight: 100;
     text-transform: uppercase;
+    margin: 0;
 }
 
 .aboutContent p {
@@ -226,6 +229,8 @@ header a i {
     font-size: 3.5rem;
     font-family: 'Cormorant Garamond', serif;
     text-transform: uppercase;
+    margin: 0 auto;
+    max-width: 250px;
 }
 
 .linkSection i {
@@ -235,7 +240,6 @@ header a i {
 
 /* Blog Section Styles */
 .blogSection {
-    background-color:#C3D3CB;
     color: #152D20;
 }
 
@@ -244,11 +248,12 @@ header a i {
     font-weight: 100;
     font-size: 3.5rem;
     text-transform: uppercase;
+    width: 90%;
 }
 
-
 .blogSection p {
-    padding: 30px 0;
+    padding: 15px 0 60px;
+
 }
 
 .blogSection a {
@@ -269,93 +274,39 @@ header a i {
     color: #152D20;
 }
 
+.blogContainerOne,
+.blogContainerTwo {
+    width: 100%;
+}
+
+.blogContentFirst,
+.blogContainerOne li:nth-of-type(1),
+.blogContainerOne li:nth-of-type(2),
+.blogContainerTwo li img {
+    float: right; 
+} 
+
+.blogContentSecond,
+.blogContainerTwo li:nth-of-type(1),
+.blogContainerTwo li:nth-of-type(2) {
+    float: left; 
+} 
+
 .blogSection li {
     width: 50%;
-    float: left; 
-    margin: 0 auto;
-} 
+}
 
 .blogSection img {
     max-width: 951px;
 }
 
-.blogSection li:nth-of-type(3) {
-    border: 1px solid red;
-    float:right;
-}
-
-.blogContentFirst {
-    width: 100%;
-    float: right;
-    max-width: 720px;
-    padding-top: 150px;
-    padding-right: 100px;
-}
-
+.blogContentFirst,
 .blogContentSecond {
     width: 100%;
-    float: left;
     max-width: 720px;
-    padding-top: 150px;
-    padding-left: 100px;
+    padding:5vw 5vw 0 5vw;
 }
 
-/*
-.floatRight li p,
-.floatRight li h4
- {     
-    width: 100%;
-    float: right;
-    max-width: 720px;
-}
-
-.floatRight li a {
-    float:right;
-    max-width: 720px;
-}
-
-.floatLeft li p,
-.floatLeft li h4
- {     
-    width: 100%;
-    float: left;
-    max-width: 720px;
-}
-
-.floatLeft li a {
-    float:left;
-    max-width: 720px;
-}
-
-/* .floatRight li:nth-of-type(1) {
-    border: 1px solid red;
-    padding: 100px;
-} */
-
-
-
-/*
-.floatRight {
-    width: 100%;
-    float:right;
-    max-width: 1620px;
-}
-
-.floatRight li {
-    width: 50%;
-    float: left;
-}
-
-.floatLeft {
-    width: 90%;
-    float:left;
-}
-
-.floatLeft li {
-    width: 50%;
-    float: left;
-}
-*/
 
 /* Contact Section */
 .contactSection {
@@ -368,7 +319,12 @@ header a i {
     padding: 80px 0px;
     text-transform: uppercase;
     font-family: 'Cormorant Garamond', serif;
-    font-size: 1.8rem;
+    font-size: 2.2rem;
+    line-height: 2.9rem;
+}
+
+.contactNav a {
+    margin: 15px;
 }
 
 .contactSubscribe {
@@ -376,7 +332,6 @@ header a i {
     float:left;
     text-align: center;
     padding: 80px 0;
-    
 }
 
 .contactSubscribe p {
@@ -395,9 +350,16 @@ header a i {
     height:49px;
 }
 
+.contactSubscribe button:hover,
+.contactSubscribe button:active {
+    color: black;
+    background-color: #fcfcfc;
+    border: 1px solid black;
+}
+
 .contactSubscribe input {
     width:70%;
-    padding: 10px 20px;
+    padding: 9px 20px;
     border: none;
 }
 
@@ -406,6 +368,7 @@ header a i {
     text-transform: uppercase;
     font-weight: 700;
     font-size: 3.5rem;
+    padding: 0 0 20px;
 }
 
 
@@ -422,4 +385,128 @@ header a i {
 footer {
     background-color: black;
     text-align: center;
+    padding: 30px 0;
 }
+
+
+/* MEDIA QUERIES */
+
+@media (max-width: 1250px) {
+    .aboutImg,
+    .aboutContent {
+        width: 100%; 
+        padding: 50px 40px 0;
+    }
+
+    .aboutImg {
+        text-align:center;
+    }
+
+    .aboutContent h2,
+    .aboutContent p {
+        text-align: left;
+    }
+
+    .aboutContent {
+        text-align: center;
+        padding-bottom: 50px;
+    }
+
+}
+
+@media (max-width: 1175px) {
+    .blogSection li,
+    .blogSection img,
+    .blogContentFirst,
+    .blogContentSecond,
+    .blogSection h4 {
+        max-width: 1175px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .blogContentFirst,
+    .blogContentSecond {
+        margin-bottom: 30px;
+    }
+
+    .contactNav {
+        width: 100%;
+        text-align:center;
+        padding: 40px 0;
+    }
+
+    .contactNav li {
+        display: inline-block;
+    }
+
+    .contactNav ul {
+        text-align: center;
+    }
+
+    .contactSubscribe {
+        width: 100%;
+        padding: 0;
+    }
+
+    .contactSubscribe input {
+        display: block;
+        width: 90%;
+        margin: 0 auto;
+        max-width: 750px;
+        text-align: center;
+    }
+
+    .contactSubscribe button {
+        width: 90%;
+        margin: 20px auto;
+        max-width: 750px;
+        
+    }
+
+    .contactAddress {
+        width: 100%;
+        text-align: center;
+        padding: 30px 0;
+    }
+}
+
+@media (max-width: 850px) {
+    .galleryImgs li:nth-of-type(1),
+    .galleryImgs li:nth-of-type(2) {
+        width: calc((100% - 100px) / 2);
+    }
+
+    .galleryImgs li:nth-of-type(1) {
+        margin: 0 20px 0 40px;
+    }
+
+    .galleryImgs li:nth-of-type(3) {
+        display: none;
+    }
+}
+
+
+@media (max-width: 650px) {
+    header nav {
+        display: none;
+    }
+
+    header h1 {
+        float: left;
+        margin: 10px 0 0 20px;
+        font-size: 6rem;
+        text-align: left;
+    }
+
+    .headerIcons {
+        display: none;
+    }
+
+    .linkContainer {
+        width: 100%;
+        margin: 40px 0;
+    }
+
+}
+
