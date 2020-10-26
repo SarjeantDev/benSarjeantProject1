@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Project 1 - Ben Sarjeant</title>
 
     <!-- google fonts start -->
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Fredericka+the+Great&family=Roboto:wght@300&display=swap" rel="stylesheet">
@@ -11,15 +11,20 @@
 
     <link rel="stylesheet" type="text/css" href="./style.css">
     
+    <!-- script tag supplying all font awesome symbols -->
     <script src="https://kit.fontawesome.com/e8e5081168.js"  crossorigin="anonymous"></script>
 
 </head>
 
 <body>
+    <!-- START OF HEADER -->
     <header>
         <div class="wrapper clearfix">
             <nav>
-                <ul>
+                <!-- invisible checkbox and hamburger symbol -->
+                <input type="checkbox" id="toggle" name="toggle" />
+                <label for="toggle"><i class="fas fa-bars"></i></label>
+                <ul class="sideMenu">
                     <li><a href="">Home</a></li>
                     <li><a href="#aboutSec">About</a></li>
                     <li><a href="#blogSec">Blog</a></li>
@@ -28,6 +33,8 @@
             </nav>
             <h1>Animal Refuge</h1>
         </div>
+
+        <!-- social media icons -->
         <div class="headerIcons">
             <a href=""><i class="fab fa-instagram"></i></a>
             <a href=""><i class="fab fa-facebook-f"></i></a>
@@ -36,111 +43,126 @@
         </div>
     </header>
 
-<main>
-    <section id="aboutSec" class="aboutSection">
-        <div class="wrapper clearfix">
-            <div class="aboutImg">
-                <img src="./assets/image6.jpg" alt=""></div>
-            <div class="aboutContent">
-                <h2>Suzie's Story</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum ad assumenda cupiditate ipsa inventore, nisi eaque. Molestiae repellendus recusandae quidem explicabo obcaecati, ab iusto eligendi cupiditate doloremque impedit dolorum labore. Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque soluta quam id, quibusdam numquam et. Minima tempora nostrum quasi totam pariatur assumenda! Consequuntur quaerat obcaecati maxime, distinctio quis modi voluptas. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt quidem, sunt amet quas aperiam enim quisquam perferendi! </p>
-                <a href="">Read More</a>
+    <!-- START OF MAIN -->
+    <main>
+        <!-- about section outling suzies story -->
+        <section id="aboutSec" class="aboutSection">
+            <div class="wrapper clearfix">
+                <div class="aboutImg"><img src="./assets/image6.jpg" alt="cat relaxing on top of couch"></div>
+                <div class="aboutContent">
+                    <h2>Suzie's Story</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum ad assumenda cupiditate ipsa inventore, nisi eaque. Molestiae repellendus recusandae quidem explicabo obcaecati, ab iusto eligendi cupiditate doloremque impedit dolorum labore. Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque soluta quam id, quibusdam numquam et. Minima tempora nostrum quasi totam pariatur assumenda! Consequuntur quaerat obcaecati maxime, distinctio quis modi voluptas. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt quidem, sunt amet quas aperiam enim quisquam perferendi! </p>
+                    <a href="">Read More</a>
+                </div>
+                <!-- end of written content -->
             </div>
-        </div>
-    </section>
+            <!-- end of wrapper -->
+        </section>
+        <!-- end of about section -->
 
-    <section class="gallerySection">
-        <div class="wrapper">
-            <div class="galleryImgs">
-                <h2>Some of our friends</h2>
-                <ul class="clearfix">
-                    <li><img src="./assets/image5.jpg" alt=""></li>
-                    <li><img src="./assets/image4.jpg" alt=""></li>
-                    <li><img src="./assets/image3.jpg" alt=""></li>
-                </ul>
+
+        <!-- gallery section showing some of our friends -->
+        <section class="gallerySection">
+            <div class="wrapper">
+                <div class="galleryImgs">
+                    <h2>Some of our friends</h2>
+                    <ul class="clearfix">
+                        <li><img src="./assets/image5.jpg" alt="lizard chilling on a tree"></li>
+                        <li><img src="./assets/image4.jpg" alt="goat staring into the camera"></li>
+                        <li><img src="./assets/image3.jpg" alt="parrot eating some food"></li>
+                    </ul>
+                </div>
+                <!-- end of div containing images -->
             </div>
-        </div>
-    </section>
+            <!-- end of wrapper -->
+        </section>
+        <!-- end of gallery section-->
 
-    <section class="linkSection">
-        <div class="wrapper clearfix">
-            <div class="linkContainer">
-                <i class="fas fa-paw"></i>
-                <h3>Animal Spotlight</h3>
+
+        <!-- link section -->
+        <section class="linkSection">
+            <div class="wrapper clearfix">
+                <div class="linkContainer">
+                    <i class="fas fa-paw"></i>
+                    <h3>Animal Spotlight</h3>
+                </div>
+                <div class="linkContainer">
+                    <i class="fas fa-calendar-check"></i>
+                    <h3>Events</h3>
+                </div>
+                <div class="linkContainer">
+                    <i class="fas fa-shopping-bag"></i>
+                    <h3>Merch</h3>
+                </div>
             </div>
-            <div class="linkContainer">
-                <i class="fas fa-calendar-check"></i>
-                <h3>Events</h3>
-            </div>
-            <div class="linkContainer">
-                <i class="fas fa-shopping-bag"></i>
-                <h3>Merch</h3>
-            </div>
-        </div>
-    </section>
+            <!-- end of wrapper-->
+        </section>
+        <!-- end of link section-->
 
-    <section class="blogSection" id="blogSec">
-            <div class="blogContainerOne">
-                <ul class="clearfix">
-                    <li><img src="./assets/image7.jpg" alt=""></li>
+        <!-- blog section - zebras and bond between animals and humans -->
+        <section class="blogSection" id="blogSec">
+                <!-- putting first image and first section of content in a div together -->
+                <div class="blogContainerOne">
+                    <ul class="clearfix">
+                        <li><img src="./assets/image7.jpg" alt="two zebras out in the wild"></li>
+                        <li>
+                            <div class="blogContentFirst">
+                                <h4>Fascinating Facts About Zebras</h4>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut aliquid beatae perspiciatis ducimus, atquesantium ipsam nobis praesentium abculpa id unde similique eveniet perspiciatis eligendi mollitia libero reprehenderit provident corporis facere quis! Deserunt!</p>
+                                <a href="">Read More</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!-- end of blogContainerOne-->
 
-                    <li>
-                        <div class="blogContentFirst">
-                            <h4>Fascinating Facts About Zebras</h4>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut aliquid beatae perspiciatis ducimus, atquesantium ipsam nobis praesentium abculpa id unde similique eveniet perspiciatis eligendi mollitia libero reprehenderit provident corporis facere quis! Deserunt!</p>
-                            <a href="">Read More</a>
-                        </div>
-                    </li>
-                </ul>
+                <!-- putting second image and first section of content in a div together -->
+                <div class="blogContainerTwo">
+                    <ul class="clearfix">
+                        <li><img src="./assets/image2.jpg" alt="cat giving a high five"></li>
+                        <li>
+                            <div class="blogContentSecond">
+                                <h4>The bond between animals and humans</h4>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut aliquid beatae perspiciatis ducimus, atquesantium ipsam nobis praesentium abculpa id unde similique eveniet perspiciatis eligendi mollitia libero reprehenderit provident corporis facere quis! Deserunt!</p>
+                                <a href="">Read More</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!-- end of blogContentTwo -->
+        </section>
+        <!-- end of blog section -->
 
-            </div>
 
-
-            <div class="blogContainerTwo">
-                <ul class="clearfix">
-                    <li><img src="./assets/image2.jpg" alt=""></li>
-
-                    <li>
-                        <div class="blogContentSecond">
-                            <h4>The bond between animals and humans</h4>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut aliquid beatae perspiciatis ducimus, atquesantium ipsam nobis praesentium abculpa id unde similique eveniet perspiciatis eligendi mollitia libero reprehenderit provident corporis facere quis! Deserunt!</p>
-                            <a href="">Read More</a>
-                        </div>
-                    </li>
-                </ul>
-
-            </div>
-
-    </section>
-
-    <section class="contactSection" id="contactSec">
-        <div class="wrapper clearfix">
+        <!-- contact us section -->
+        <section class="contactSection" id="contactSec">
+            <div class="wrapper clearfix">
                 <ul class="contactNav">
-                    <li><a href="#Home">Home</a></li>
-                    <li><a href="#Blog">Blog</a></li>
-                    <li><a href="#Gallery">Gallery</a></li>
-                    <li><a href="#Contact">Contact</a></li>
+                    <li><a href="">Home</a></li>
+                    <li><a href="#aboutSec">About</a></li>
+                    <li><a href="#blogSec">Blog</a></li>
+                    <li><a href="#contactSec">Contact</a></li>
                 </ul>
-            <div class="contactSubscribe">
-                <h5>Stay Updated</h5>
-                <p>Subscribe to our newsletter to stay updated.</p>
-                <input type="email" name="" id="" placeholder="email address"><button type="button" value="Click Me">Subscribe</button>
-        
+                <div class="contactSubscribe">
+                    <h5>Stay Updated</h5>
+                    <p>Subscribe to our newsletter to stay updated.</p>
+                    <input type="email" name="" id="" placeholder="email address"><button type="button" value="Click Me">Subscribe</button>
+                </div>
+                <div class="contactAddress">
+                    <h5>Contact</h5>
+                    <p>info@email.com | 123 - 456 - 7890</p>
+                    <p>123 some road, Toronto, ON</p>
+                    <p>A5A 5A5, Canada</p>
+                </div>
             </div>
-            <div class="contactAddress">
-                <h5>Contact</h5>
-                <p>info@email.com | 123 - 456 - 7890</p>
-                <p>123 some road, Toronto, ON</p>
-                <p>A5A 5A5, Canada</p>
-            </div>
-        </div>
-    </section>
-</main>
+        </section>
+        <!-- end of contact us section-->
+    </main>
 
-<footer>
-    <p>Copyright © 2019 HackerYou </p>
-</footer>
+    <!-- START OF FOOTER SECTION -->
+    <footer>
+        <p>Copyright © 2019 HackerYou </p>
+    </footer>
 
 </body>
-
 </html>

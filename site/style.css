@@ -10,21 +10,10 @@ html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: 
 .srOnly { position: absolute; width: 1px; height: 1px; margin: -1px; border: 0; padding: 0; white-space: nowrap; clip-path: inset(100%); clip: rect(0 0 0 0); overflow: hidden;}
 /* end of setup snippet */
 
+/************* PROJECT 1 - BEN SARJEANT ****************/
+/******* JUNO COLLEGE - WEB DEVELOPMENT BOOTCAMP *******/
 
-/* CSS rules for fonts
-font-family: 'Cormorant Garamond', serif;
-font-family: 'Fredericka the Great', cursive;
-font-family: 'Roboto', sans-serif; 
-*/
-
-/* CSS colours
-white: #FCFCFC
-light green: #C3D3CB
-dark green: #152D20
-*/
-
-
-/* Global Styles */
+/* GLOBAL STYLES & STRIPING OF STYLES */
 *, h1 {
     padding: 0;
     margin: 0;
@@ -33,8 +22,8 @@ dark green: #152D20
 html {
     font-size: 62.5%;
     overflow-x:hidden;
-    
 }
+
 body {
     font-family: 'Josefin Sans', sans-serif;
     color: #FCFCFC;
@@ -71,7 +60,7 @@ img {
     margin: 0 auto;
 }
 
-/* Header Styles */
+/* HEADER STYLES */
 header {
     background-image: url(./assets/image1.jpg);
     background-position: center;
@@ -82,16 +71,13 @@ header {
 }
 
 /* header navigation styles */
-header nav {
+header nav,
+header ul li  {
     float: left;
 }
 
 header li {
     margin-top: 15px;
-}
-
-header ul li {
-    float: left;
 }
 
 header li a,
@@ -102,10 +88,13 @@ header a i {
     border: 1px solid rgba(252,252,252,0)
 }
 
-header li a:hover,
-header li a:focus,
+/* setting a focus and hover on both the nav and the social icons */
+nav li a:hover,
+nav li a:focus,
 header a i:hover,
-header a i:focus {
+header a i:focus,
+.contactNav li a:hover,
+.contactNav li a:focus {
     border: 1px solid #FCFCFC;
 }
 
@@ -124,17 +113,43 @@ header h1 {
     margin: 200px 20px 10px 0;
     max-width: 50px;
     position:absolute;
-    
     right: 0px;
     bottom: 20px;
 }
 
 header a i {
     padding: 10px;
-    
 }
 
-/* ABOUT SECTION */
+/* HAMBURGER NAVIGATION styles  - these are default starting styles
+actual navigation styles begin lower down in MEDIA SECTION */
+.fas,
+.fa-bars {
+    font-size: 4rem;
+}
+
+input[type="checkbox"]:checked ~ ul.sideMenu {
+    right: 0;  
+}
+
+input[type="checkbox"]:checked + label[for="toggle"] {
+    right: -30%;
+    transition: all 0.5s;
+} 
+
+input[type="checkbox"] {
+    display: none; 
+}
+
+label[for="toggle"] {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    color: white;
+    z-index: -1;
+}
+
+/* ABOUT SECTION (suzies story)*/
 .aboutSection {
     background-color:#152D20; 
 }
@@ -144,7 +159,6 @@ header a i {
     width: 30%;
     padding: 100px 40px 100px 0;
 }
-
 
 .aboutContent {
     float: left;
@@ -182,7 +196,7 @@ header a i {
     color: #FCFCFC;
 }
 
-/* Gallery styles */
+/* GALLERY STYLES (some of our friends) */
 .gallerySection {
     text-align: center;
     background-color:  #C3D3CB;
@@ -213,7 +227,7 @@ header a i {
 	margin-right: 0px;
 }
 
-/* Link Section styles */
+/* LINK SECTION STYLES */
 .linkSection {
     background-color: #152D20;
 }
@@ -238,7 +252,7 @@ header a i {
     font-size: 7rem;
 }
 
-/* Blog Section Styles */
+/* BLOG SECTION STYLES */
 .blogSection {
     color: #152D20;
 }
@@ -253,7 +267,6 @@ header a i {
 
 .blogSection p {
     padding: 15px 0 60px;
-
 }
 
 .blogSection a {
@@ -279,6 +292,7 @@ header a i {
     width: 100%;
 }
 
+/* floating certain blog contents right as per image */
 .blogContentFirst,
 .blogContainerOne li:nth-of-type(1),
 .blogContainerOne li:nth-of-type(2),
@@ -286,6 +300,7 @@ header a i {
     float: right; 
 } 
 
+/* floating certain blog contents left as per image */
 .blogContentSecond,
 .blogContainerTwo li:nth-of-type(1),
 .blogContainerTwo li:nth-of-type(2) {
@@ -308,7 +323,7 @@ header a i {
 }
 
 
-/* Contact Section */
+/* CONTACT SECTION (stay updated & subscribe) */
 .contactSection {
     background-color: #152D20;
 }
@@ -319,12 +334,17 @@ header a i {
     padding: 80px 0px;
     text-transform: uppercase;
     font-family: 'Cormorant Garamond', serif;
-    font-size: 2.2rem;
+    font-size: 2.5rem;
     line-height: 2.9rem;
 }
 
+.contactNav li {
+    padding: 10px;
+}
+
 .contactNav a {
-    margin: 15px;
+    padding: 10px 15px;
+    border: 1px solid #152D20;
 }
 
 .contactSubscribe {
@@ -371,7 +391,6 @@ header a i {
     padding: 0 0 20px;
 }
 
-
 .contactAddress {
     width: 30%;
     float:right;
@@ -381,7 +400,7 @@ header a i {
 }
 
 
-/* Footer Styles */
+/* FOOTER STYLES */
 footer {
     background-color: black;
     text-align: center;
@@ -390,30 +409,7 @@ footer {
 
 
 /* MEDIA QUERIES */
-
-@media (max-width: 1250px) {
-    .aboutImg,
-    .aboutContent {
-        width: 100%; 
-        padding: 50px 40px 0;
-    }
-
-    .aboutImg {
-        text-align:center;
-    }
-
-    .aboutContent h2,
-    .aboutContent p {
-        text-align: left;
-    }
-
-    .aboutContent {
-        text-align: center;
-        padding-bottom: 50px;
-    }
-
-}
-
+/* blog section & contact nav media query */
 @media (max-width: 1175px) {
     .blogSection li,
     .blogSection img,
@@ -461,7 +457,6 @@ footer {
         width: 90%;
         margin: 20px auto;
         max-width: 750px;
-        
     }
 
     .contactAddress {
@@ -471,13 +466,37 @@ footer {
     }
 }
 
+/* about content (suzies story) media query */
+@media (max-width: 1050px) {
+    .aboutImg,
+    .aboutContent {
+        width: 100%; 
+        padding: 50px 40px 0;
+    }
+
+    .aboutImg {
+        text-align:center;
+    }
+
+    .aboutContent h2,
+    .aboutContent p {
+        text-align: left;
+    }
+
+    .aboutContent {
+        text-align: center;
+        padding-bottom: 50px;
+    }
+}
+
+/* some of our friends media query */
 @media (max-width: 850px) {
     .galleryImgs li:nth-of-type(1),
     .galleryImgs li:nth-of-type(2) {
         width: calc((100% - 100px) / 2);
     }
 
-    .galleryImgs li:nth-of-type(1) {
+    .galleryImgs li:first-of-type {
         margin: 0 20px 0 40px;
     }
 
@@ -486,12 +505,8 @@ footer {
     }
 }
 
-
+/* heading media queries & side navigation styling */
 @media (max-width: 650px) {
-    header nav {
-        display: none;
-    }
-
     header h1 {
         float: left;
         margin: 10px 0 0 20px;
@@ -508,5 +523,24 @@ footer {
         margin: 40px 0;
     }
 
+    /* side navigation */
+    .sideMenu {
+        position: fixed;
+        z-index: 10;
+        width: 30%;
+        right: -30%;
+        transition: all 0.5s;
+    }
+
+    .sideMenu a {
+        display: inline-block;
+        font-size: 2.2rem;
+        transition: all 0.5s; 
+    }
+
+    /* making the hamburger menu visible */
+    label[for="toggle"] {
+        z-index: 10;
+    }
 }
 
